@@ -1,4 +1,14 @@
+/** Needed for Wordpress to See the Theme */
 @import 'common/theme';
+
+/** Vendor Modules **/
 @import 'common/normalize';
+@import 'common/common';
+
+/** Custom Modules **/
 @import 'modules/header';
+@import 'modules/homepage';
+@import 'modules/page';
 @import 'modules/footer';
+@import 'modules/industry';
+@import 'modules/about';

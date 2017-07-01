@@ -1,0 +1,121 @@
+.about-carousel {
+    background-color: #343434;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.about-carousel__indicators {
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .about-carousel__indicators {
+        justify-content: flex-end;
+    }
+}
+
+.about-carousel__indicator {
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 4px;
+    width: 10px;
+}
+
+.about-carousel__indicator--active {
+    background-color: #da1f26;
+}
+
+.about-carousel__item {
+    background-color: #343434;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    left: 100%;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    position: absolute;
+    top: 0;
+    transition: left .4s ease-in;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .about-carousel__item {
+        align-items: center;
+        flex-direction: row;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.about-carousel__item--active {
+    left: 0;
+}
+
+.about-carousel__item--out {
+    animation: item-out .4s;
+}
+
+@keyframes item-out {
+    0% {
+        left: 0;
+    }
+
+    99% {
+        left: -100%;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.about-carousel__item-title {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .about-carousel__item-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+}
+
+.about-carousel__item-image {
+    align-items: center;
+    background: linear-gradient(#aeaeae,#808080); /* Standard syntax */
+    border: solid 3px #da1f26;
+    border-radius: 50%;
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 175px;
+    justify-content: center;
+    margin: 0 auto 24px;
+    overflow: hidden;
+    width: 175px;
+}
+
+@media screen and (min-width: 1024px) {
+    .about-carousel__item-image {
+        margin: 0 40px 0 0;
+    }
+
+    .about-carousel__item-copy {
+        max-width: 80%;
+    }
+}
+
+.about-carousel__item-image > span {
+    font-size: 80px;
+}
